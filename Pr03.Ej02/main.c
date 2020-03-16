@@ -7,25 +7,20 @@
 #include "complex/ComplexNumber.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) {
 	Complex c1 = { 2.0f, 5.0f };
-	Complex c2 = { 4.0f, 1.0f };
-
-	Complex c = sumar(c1, c2);
+	Complex *c2 = (Complex *)malloc(sizeof(Complex));
 
 	print(c1);
 	printf(" + ");
-	print(c2);
+	print(*c2);
 	printf(" = ");
-	print(c);
+	print(sumar(c1, *c2));
 	printf("\n");
 
-	print(c1);
-	printf(" - ");
-	print(c2);
-	printf(" = ");
-	print(resta(c1, c2));
+	resta(&c1, c2);
 	printf("\n");
 
 	printf("Mod: %.2f\n", modulo(c));

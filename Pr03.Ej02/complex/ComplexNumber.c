@@ -16,11 +16,9 @@ Complex sumar(Complex c1, Complex c2) {
 	return c;
 }
 
-Complex resta(Complex c1, Complex c2) {
-	Complex c;
-	c.r = c1.r - c2.r;
-	c.i = c1.i - c2.i;
-	return c;
+void resta(Complex *c1, Complex *c2) {
+	c1->r = c1->r - c2->r;
+	c1->i = c1->i - c2->i;
 }
 
 float modulo(Complex c)

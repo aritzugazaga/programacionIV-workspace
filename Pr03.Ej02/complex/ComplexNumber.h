@@ -15,7 +15,7 @@ typedef struct {
 
 Complex sumar(Complex c1, Complex c2);
 
-Complex resta(Complex c1, Complex c2);
+void resta(Complex *c1, Complex *c2);
 
 float modulo(Complex c);
 
