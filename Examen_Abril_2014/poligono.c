@@ -32,5 +32,26 @@ void liberar(Poligono *poli) {
 }
 
 void anadirVertice(Poligono *poli, Punto p) {
+	int newNumVertices = poli->numVertices + 1;
 
+	Punto *puntos = malloc(newNumVertices * sizeof(Punto));
+	int i;
+	for (i = 0; i < poli->numVertices; ++i) {
+		puntos[i] = poli->numVertices[i];
+	}
+	puntos[poli->numVertices] = p;
+
+	free(poli->vertices);
+	poli->vertices = puntos;
+	poli->numVertices = newNumVertices;
+}
+
+void copiarPoligono(Poligono *poli1, Poligono poli2) {
+	int n = poli2.numVertices;
+	poli1->numVertices = n;
+	poli1->vertices = malloc(n * sizeof(Punto));
+	int i;
+	for (i = 0; i < n; ++i) {
+		poli1->vertices[i] = poli2.vertices[i];
+	}
 }

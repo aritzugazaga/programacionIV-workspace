@@ -6,6 +6,7 @@
  */
 
 #include "punto.h"
+#include "poligono.h"
 
 int main(void) {
 	Punto p1 = { 1, 2 };
@@ -42,7 +43,18 @@ int main(void) {
 	}
 
 	Poligono poli = {numVertices, puntos};
-	printf("%f", perimetro(&poli));
+	float f = perimetro(poli);
+	printf("Perimetro: %f\n", perimetro(*poli));
+
+	anadirVertice(poli, p1);
+	Poligono poliCopied;
+	copiarPoligono(&poliCopied, *poli);
+
+	imprimirPoligono(*poli);
+	imprimirPoligono(poliCopied);
+
+	liberar(poli);
+	free(poli);
 
 	return 0;
 }
