@@ -1,0 +1,6 @@
+CENSO DE JOVENES
+________________
+[Nombres: Hodei, Edad: 6]
+[Nombres: Aitor, Edad: 12]
+[Nombres: Maite, Edad: 24]
+Media: 14.00
