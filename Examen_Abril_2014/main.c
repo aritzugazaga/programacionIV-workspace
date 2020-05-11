@@ -35,7 +35,7 @@ int main(void) {
 	for (k = 0; k < numVertices; ++k) {
 		int x,y = 0;
 		printf("introducir coordenada X del punto %i \n", k+1);
-		scanf("%i", &y);
+		scanf("%i", &x);
 		printf("Introducir coordenada Y del punto %i \n", k+1);
 		scanf("%i", &y);
 		puntos[k].x = x;
