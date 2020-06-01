@@ -8,16 +8,15 @@
 #ifndef PUNTO_H_
 #define PUNTO_H_
 
-class Punto
-{
+class Punto {
 	int x, y;
 
 public:
 	Punto(); //Constructor sin argumentos
-	Punto(int x, int y);//Constructor
-	~Punto();//Destructor
+	Punto(int x, int y); //Constructor
+	~Punto(); //Destructor
 
-	void imprimir();//Sacar coordenadas por pantalla
+	void imprimir(); //Sacar coordenadas por pantalla
 
 	//Modificar y consultar valores
 	int getX() const;
