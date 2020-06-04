@@ -12,16 +12,23 @@
 
 class Familia {
 private:
-	Miembro* conyugeH;
-	Miembro* conyugeM;
+	// Con puntero, por que si no se duplican objetos
+	Miembro *conyugeH;
+	Miembro *conyugeM;
 public:
-	Familia(Miembro* conyugeH, Miembro* conyugeM);
+	Familia(Miembro *conyugeH, Miembro *conyugeM);
 	Familia(const Familia &f);
 	Familia();
 	virtual ~Familia();
 
+	void setConyugeH(Miembro* conyugeH);
+	Miembro* getConyugeH() const;
+	void setConyugeM(Miembro* conyugeM);
+	Miembro* getConyugeM() const;
 
-
+	char* getNombre() const;
+	virtual void imprimir();
+	virtual int contarMenoresDeEdad(int);
 
 };
 
